@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pizza Shop</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="filters">
+            <h2>Filters</h2>
+            <div class="filter-item">
+                <label for="vegetarian">Vegetarian</label>
+                <input type="checkbox" id="vegetarian" name="vegetarian" value="vegetarian">
+            </div>
+            <div class="filter-item">
+                <label for="non-vegetarian">Non Vegetarian</label>
+                <input type="checkbox" id="non-vegetarian" name="non-vegetarian" value="non-vegetarian">
+            </div>
+            <div class="filter-item">
+                <label for="sort-by">Sort By</label>
+                <select id="sort-by" name="sort-by">
+                    <option value="price">Price</option>
+                    <option value="rating">Rating</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="menu">
+            <h2>Menu</h2>
+            <ul class="pizza-listing"></ul>
+        </section>
+
+        <div class="popup-overlay"></div>
+        <div class="popup">
+            <div class="popup-header">
+                <h3>Customize Your Pizza</h3>
+                <button class="close-popup">X</button>
+            </div>
+            <div class="popup-content">
+                <form>
+                    <h4>Select Add-ons</h4>
+                    <div class="add-ons"></div>
+                    <h4>Select Toppings</h4>
+                    <div class="toppings"></div>
+                    <h4>Select Quantity</h4>
+                    <input type="number" name="quantity" id="quantity" min="1" value="1">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Pizza Shop. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
